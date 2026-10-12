@@ -1,387 +1,301 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <title>Mohd Adil Mohammed Akbar | Applied AI Engineer</title>
+    <meta name="description" content="Applied AI Engineer building LLM-powered applications, RAG systems and multi-agent automation in Python. Systems Engineer (AIML) at TCS.">
+    <meta name="theme-color" content="#12103A">
+    <meta property="og:title" content="Mohd Adil Mohammed Akbar | Applied AI Engineer">
+    <meta property="og:description" content="LLM applications, RAG systems and agentic automation that cut manual effort by up to 50%.">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav" aria-label="Main">
+        <a href="#top" class="nav-brand" aria-label="Back to top">MA</a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+        <canvas id="field" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+            <p class="hero-role">Applied AI Engineer at TCS</p>
+            <h1 class="name" aria-label="Mohd Adil Mohammed Akbar">
+                <span class="name-line" aria-hidden="true">Mohd Adil</span>
+                <span class="name-line" aria-hidden="true">Mohammed Akbar</span>
+            </h1>
+            <p class="typed-line">I build <span class="typed" id="typed">LLM-powered applications</span><span class="caret" aria-hidden="true"></span></p>
+            <p class="hero-summary">LLM applications, RAG systems and multi-agent automation in Python. My enterprise AI work has cut manual effort by up to 50%.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://docs.google.com/document/d/1wPZGjKS4aucozWiNtwe6cSiv9CVY6ecpROYd6OE7Yhw/edit?usp=sharing" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i> View resume</a>
+                <a class="btn btn-ghost" href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Get in touch</a>
+            </div>
+            <p class="hero-hint">Move your cursor over the field: it acts as a search query, and the six nearest vectors light up.</p>
+        </div>
+        <a class="scroll-cue" href="#stats" aria-label="Scroll down"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
     </header>
-    <!-- End header -->
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1 class="typed">Mohd Adil Mohammed Akbar</h1>
-            <h2 class="typed">Software Engineer</h2>
-            <a href="https://docs.google.com/document/d/1wPZGjKS4aucozWiNtwe6cSiv9CVY6ecpROYd6OE7Yhw/edit?usp=sharing" class="btn-rounded-white">Download Resume</a>
-        </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Pursuing B.E CSE(AIML). Honours in Cybersecurity with a passion for exploring and crafting cutting-edge software solutions in the realms of Android development, AIML, cybersecurity, Blockchain , Game and Web development. Participated and won in a number of hackathon/events some of them are hack4pan, SIH(2021, 2023), Avishkar, Zephyr, DeepBlue, Codeathon and Pragyan. 
-                    </p>
-                </div>
+    <!-- KEYWORD BAND -->
+    <div class="band-wrap" aria-hidden="true">
+        <div class="band">
+            <div class="band-track">
+                <span>Agentic AI</span><span>RAG</span><span>LLM Evaluation</span><span>Semantic Search</span><span>Multi-agent Pipelines</span><span>Forecasting</span><span>Python Automation</span><span>Microservices</span>
+                <span>Agentic AI</span><span>RAG</span><span>LLM Evaluation</span><span>Semantic Search</span><span>Multi-agent Pipelines</span><span>Forecasting</span><span>Python Automation</span><span>Microservices</span>
             </div>
         </div>
     </div>
-    <!-- End #about -->
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>IBM - Edunet - AICTE</h3>
-                <h4>Artificial Intelligence Intern</h4>
-
+    <!-- IMPACT -->
+    <section class="stats" id="stats" aria-label="Impact at a glance">
+        <div class="wrap stats-grid">
+            <div class="stat c-coral">
+                <p class="stat-num"><span class="count" data-to="40">40</span>–<span class="count" data-to="50">50</span>%</p>
+                <p class="stat-label">less manual effort across enterprise workflows with LLM automation (STC)</p>
             </div>
-
-            <div data-date="July 2023 – July 2023">
-                <h3>Internsavy</h3>
-                <h4>Android Developer</h4>
-
+            <div class="stat c-sun">
+                <p class="stat-num"><span class="count" data-to="30">30</span>–<span class="count" data-to="40">40</span>%</p>
+                <p class="stat-label">lower automation cost with a Python + Selenium framework</p>
             </div>
-
-            <div data-date="July 2023 – July 2023">
-                <h3>Internsavy</h3>
-                <h4>Data Science Intern</h4>
-
+            <div class="stat c-aqua">
+                <p class="stat-num">~<span class="count" data-to="45">45</span>%</p>
+                <p class="stat-label">less manual effort from XML validation scripts (SBI YONO 2.0)</p>
             </div>
-
-            <div data-date="October 2022 – October 2022">
-                <h3>AIMSA (Artificial Intelligence Student Association)</h3>
-                <h4>Technical Secretary</h4>
-
-            </div>
-
-            <div data-date="November 2022 – present">
-                <h3>AIMSA (Artificial Intelligence Student Association)</h3>
-                <h4>Co- Technical Head</h4>
-                <!-- <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p> -->
-            </div>
-
-            <div data-date="November 2022 – present">
-                <h3>GDSC ( Google Developer Student Club )</h3>
-                <h4>Member of Core Tech Commitee / App Dev Co-Lead</h4>
-                <!-- <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p> -->
-            </div>
-
-            <div data-date="November 2022 – present">
-                <h3>AIMSA</h3>
-                <h4>Co- Technical Head</h4>
-                <!-- <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p> -->
-            </div>
-
-
-
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Mumbai</h3>
-            <span class="education-date">Sept 2020 - June 2024</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <!-- <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p> -->
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            
-            <div class="education-details">
-                <h3>University of Mumbai</h3>
-                <span class="education-date">Sept 2023 - June 2024</span>
-                <h4>Cybersecurity (Honours)</h4>
-                <!-- <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p> -->
+            <div class="stat c-violet">
+                <p class="stat-num"><span class="count" data-to="2">2</span></p>
+                <p class="stat-label">end-to-end Agentic AI PoCs delivered and moved to enterprise VMs</p>
             </div>
         </div>
+    </section>
 
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Mahatama Phule College</h3>
-            <span class="education-date">May 2019 - March 2020</span>
-            <h4>Bifocal Science HSC</h4>
-            <!-- <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul> -->
-        </div>
-        <!-- End .education-block -->
-
-        
-        <div class="education-block">
-
-            
-            
-            <h3>Modern English School</h3>
-            <span class="education-date">June 2017 - June 2017</span>
-            <h4>SSC</h4>
-            <!-- <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p> -->
-        </div>
-
-        <!-- End .education-block -->
-        
-        
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/aV5xa_88ipp_iOwJVVm66BRTSTRXIqcUKzHv4NYAL2nziZ5QELLzQnlRwD6mCDfoAyq2=w240-h480-rw" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Image to Pdf</h3>
-                        <p>
-                            The App Turns Your Device into a powerful Scanner that can help you scan any paper document into a digital document with no watermarks, and sign-ups and absolutely free for a lifetime.
-                            <br> Note :- The Below Link Can Only be viewed in Android Device as it is a PlayStore Link                        
-                        </p>
-                        <a href="https://play.google.com/store/apps/details?id=com.joblessanimator.imagetopdf">View Project ( Use Android Device)</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="data:image/jpeg;base64,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" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Drum Set</h3>
-                        <p>
-                            A Drum Set Simulator app provides a virtual drumming experience with realistic sounds and multi-touch support. It offers customization and practice features for performance, making it an accessible tool for drummers to practice and enjoy drumming on any device.
-                        </p>
-                        <a href="https://github.com/MohdAdilMohammedAkbar/Drum-set">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-
-                </div>
-                <!-- End .project -->
-
-                                <!-- End .project -->
-
-                                <div class="project shadow-large">
-                                    <div class="project-image">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqKKmLkU2XT1nKLc-2nvLiDbNaojPCMywQew&s" />
-                                    </div>
-                                    <!-- End .project-image -->
-                                    <div class="project-info">
-                                        <h3>Path Finder</h3>
-                                        <p>
-                                            Path Finder is an application designed to help users locate files and folders within their computer's file system. It offers an intuitive interface for navigating through directories and provides various search and filtering options to quickly locate specific items.
-                                            <br> Note :- The Below Link Can Only be viewed in Android Device as it is a PlayStore Link
-                                        </p>
-                                        <a href="https://play.google.com/store/apps/details?id=com.itsmypac.pathfinder">View Project ( Use Android Device )</a>
-                                    </div>
-                                    <!-- End .project-info -->
-                
-                                </div>
-                                <!-- End .project -->
-
-                                                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="https://lh5.googleusercontent.com/proxy/uYea7I2gdY40F6eFy0fARWz00ufD-14QLWnVKswMQMZUXbiytaeGG8udn3Ex7j7SuR4jmU07J_1oNAC8lNh5nQ" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Library Management System</h3>
-                        <p>
-                            A Library Management System is software that automates tasks like cataloging, circulation, and patron management in libraries. It tracks books, manages borrowing, and helps with inventory, improving efficiency and patron services.
-                        </p>
-                        <a href="https://github.com/MohdAdilMohammedAkbar/LMS">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-
-                </div>
-                <!-- End .project -->
-
-                                <!-- End .project -->
-
-                                <div class="project shadow-large">
-                                    <div class="project-image">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIqiYpG3dUukaMfLYLUlPeb2vK-LRqTfz_tg&s" />
-                                    </div>
-                                    <!-- End .project-image -->
-                                    <div class="project-info">
-                                        <h3>Campus Connect</h3>
-                                        <p>
-                                            A College Club Connection app brings together all campus clubs, offering a central hub for communication, event planning, and collaboration. It simplifies club discovery, keeps students informed about events, and encourages cross-club interaction, enhancing the college experience.
-                                        </p>
-                                        <a href="https://github.com/Mohd-Adil-M-A/Campus-Connect-Web-Application">View Project</a>
-                                    </div>
-                                    <!-- End .project-info -->
-                
-                                </div>
-                                <!-- End .project -->
-
+    <!-- ABOUT -->
+    <section class="sec" id="about">
+        <div class="wrap about-grid">
+            <div>
+                <h2 class="sec-title">About</h2>
+                <p class="lede">I build and deploy LLM-powered applications, RAG systems and AI automation that real teams use every day.</p>
+                <p>At TCS I work on enterprise AI for telecom and banking clients. I like the full path from idea to production: agents that finish multi-step tasks on their own, retrieval that finds the right context, and automation that removes hours of manual work.</p>
+                <p>Outside work I compete in hackathons, solve LeetCode problems daily, play chess and practise Arabic and French.</p>
             </div>
+            <aside class="edu" id="education" aria-label="Education">
+                <h3>Education</h3>
+                <p class="edu-school">University of Mumbai</p>
+                <p class="edu-degree">Bachelor of Engineering, Computer Science and Engineering (Artificial Intelligence and Machine Learning)</p>
+                <p class="edu-extra">with Cyber Security (Honours)</p>
+                <p class="edu-date">Mumbai, India &middot; Aug 2024</p>
+            </aside>
         </div>
-    </div>
-    <!-- End #projects -->
+    </section>
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Android</li>
-            <li>SQLite</li>
-            <li>SQL</li>
-            <li>XML</li>
-            <li>Github</li>
-            <li>Java</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C</li>
-            <li>Dart</li>
-            <li>Flutter</li>
-            <li>One-Note</li>
-            <li>PhotoShop</li>
-            <li>Video Editing</li>
+    <!-- EXPERIENCE -->
+    <section class="sec on-light" id="experience">
+        <div class="wrap">
+            <h2 class="sec-title">Experience</h2>
+            <div class="role-head">
+                <h3>Systems Engineer, AIML</h3>
+                <p>Tata Consultancy Services (TCS) &middot; Nov 2024 to present</p>
+            </div>
 
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/f/mgegkylo">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2024</span> Mohd Adil
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
+            <div class="timeline">
+                <article class="job reveal c-coral">
+                    <span class="job-dot" aria-hidden="true"></span>
+                    <h4>Saudi Telecom Company (STC)</h4>
                     <ul>
-                        <li>
-                            <a href="https://github.com/MohdAdilMohammedAkbar" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <!-- <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li> -->
-                        <li>
-                            <a href="https://www.linkedin.com/in/mohdadil123/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <!-- <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li> -->
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <!-- <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li> -->
+                        <li>Built and deployed LLM-powered automation systems that reduced manual operational effort by 40–50% across enterprise workflows.</li>
+                        <li>Designed multi-agent AI pipelines in Python for autonomous task execution and multi-step workflow orchestration.</li>
+                        <li>Developed RAG and semantic search systems on a ChromaDB vector database for context-aware information retrieval.</li>
+                        <li>Delivered two end-to-end Agentic AI PoCs and migrated them from TCS environments to STC enterprise VMs.</li>
+                        <li>Engineered a Python + Selenium automation framework that reduced dependency on UiPath and cut automation costs by 30–40%.</li>
+                        <li>Clustered operational emails with K-Means, DBSCAN, TF-IDF and embeddings to surface recurring issues and patterns.</li>
+                        <li>Built revenue forecasting models with Prophet and ARIMA for operational planning.</li>
+                    </ul>
+                    <p class="tags"><span>LLMs</span><span>Multi-agent</span><span>RAG</span><span>ChromaDB</span><span>Selenium</span><span>K-Means</span><span>DBSCAN</span><span>Prophet</span><span>ARIMA</span></p>
+                </article>
+
+                <article class="job reveal c-aqua">
+                    <span class="job-dot" aria-hidden="true"></span>
+                    <h4>State Bank of India (SBI), YONO 2.0</h4>
+                    <ul>
+                        <li>Built and maintained RESTful microservices in Spring Boot for a large-scale banking platform.</li>
+                        <li>Wrote Python automation scripts for XML validation and workflow automation, reducing manual effort by about 45%.</li>
+                        <li>Worked with Android, Flutter and Angular teams to keep API integrations seamless.</li>
+                    </ul>
+                    <p class="tags"><span>Spring Boot</span><span>REST APIs</span><span>Python</span><span>XML</span></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="sec" id="projects">
+        <div class="wrap">
+            <h2 class="sec-title">Projects</h2>
+
+            <div class="projects">
+                <article class="project tilt c-coral reveal">
+                    <div class="project-art" aria-hidden="true">
+                        <svg id="chart" viewBox="0 0 400 160" preserveAspectRatio="none">
+                            <path id="chart-bench" pathLength="1" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-dasharray="1" stroke-dashoffset="1"></path>
+                            <path id="chart-strat" pathLength="1" fill="none" stroke="#FFC93C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"></path>
+                        </svg>
+                    </div>
+                    <h3>Agentic AI Investment Research Assistant</h3>
+                    <ul>
+                        <li>Built an agentic research platform with LangGraph and LLMs that automates stock analysis, forecasting, risk assessment and report generation.</li>
+                        <li>Integrated the Yahoo Finance API and engineered technical indicators for trend analysis and ML-based stock return prediction.</li>
+                        <li>Added financial news sentiment analysis and transaction-cost-aware backtesting that compares strategies against buy-and-hold.</li>
+                        <li>Built tool-calling workflows with structured outputs, source citations and validation to make the LLM more reliable.</li>
+                    </ul>
+                    <p class="tags"><span>Python</span><span>LangGraph</span><span>LLMs</span><span>XGBoost</span><span>Scikit-learn</span><span>Pandas</span><span>yfinance</span><span>FastAPI</span><span>Streamlit</span></p>
+                    <a class="btn btn-ink" href="https://github.com/MohdAdilMohammedAkbar" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> See it on GitHub</a>
+                </article>
+
+                <article class="project tilt c-violet reveal">
+                    <div class="project-art" aria-hidden="true">
+                        <div class="attn" id="attn"></div>
+                    </div>
+                    <h3>Transformer Architecture From Scratch</h3>
+                    <ul>
+                        <li>Implemented a Transformer in PyTorch from first principles: token embeddings, positional encoding, multi-head self-attention and feed-forward layers.</li>
+                        <li>Assembled the full encoder-decoder architecture and validated forward-pass dimensions.</li>
+                    </ul>
+                    <p class="tags"><span>PyTorch</span><span>Self-attention</span><span>Encoder-decoder</span></p>
+                    <a class="btn btn-ink" href="https://github.com/MohdAdilMohammedAkbar" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> See it on GitHub</a>
+                </article>
+            </div>
+
+            <h3 class="sub-title">Earlier builds</h3>
+            <ul class="earlier">
+                <li><a href="https://github.com/Mohd-Adil-M-A/Campus-Connect-Web-Application" target="_blank" rel="noopener"><strong>Campus Connect</strong><span>A hub for college clubs: discovery, events and collaboration in one place.</span></a></li>
+                <li><a href="https://github.com/MohdAdilMohammedAkbar/LMS" target="_blank" rel="noopener"><strong>Library Management System</strong><span>Automates cataloguing, borrowing and inventory tracking.</span></a></li>
+                <li><a href="https://github.com/MohdAdilMohammedAkbar/Drum-set" target="_blank" rel="noopener"><strong>Drum Set</strong><span>A drum simulator with realistic sounds and multi-touch support.</span></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.joblessanimator.imagetopdf" target="_blank" rel="noopener"><strong>Image to PDF</strong><span>A free document scanner for Android. The link opens on Android devices.</span></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.itsmypac.pathfinder" target="_blank" rel="noopener"><strong>Path Finder</strong><span>Find files and folders quickly with search and filters. The link opens on Android devices.</span></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="sec on-light" id="skills">
+        <div class="wrap">
+            <h2 class="sec-title">Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card c-coral reveal">
+                    <h3>GenAI and agents</h3>
+                    <ul class="chips"><li>LLM applications</li><li>LangGraph</li><li>Multi-agent pipelines</li><li>Tool calling</li><li>RAG</li><li>Semantic search</li><li>ChromaDB</li><li>Embeddings</li><li>LLM evaluation</li></ul>
+                </div>
+                <div class="skill-card c-aqua reveal">
+                    <h3>ML and data</h3>
+                    <ul class="chips"><li>PyTorch</li><li>Scikit-learn</li><li>XGBoost</li><li>Pandas</li><li>K-Means</li><li>DBSCAN</li><li>TF-IDF</li><li>Prophet</li><li>ARIMA</li></ul>
+                </div>
+                <div class="skill-card c-sun reveal">
+                    <h3>Backend and automation</h3>
+                    <ul class="chips"><li>Python</li><li>FastAPI</li><li>Streamlit</li><li>Spring Boot</li><li>REST microservices</li><li>Selenium</li><li>Java</li><li>SQL</li><li>XML</li></ul>
+                </div>
+                <div class="skill-card c-violet reveal">
+                    <h3>Also built with</h3>
+                    <ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Android</li><li>Flutter</li><li>Dart</li><li>SQLite</li><li>C</li><li>GitHub</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="sec" id="achievements">
+        <div class="wrap">
+            <h2 class="sec-title">Honors and achievements</h2>
+            <div class="wins">
+                <div class="win c-sun reveal"><i class="fa fa-trophy" aria-hidden="true"></i><p><strong>Winner</strong>TCS AI Friday Hackathon</p></div>
+                <div class="win c-coral reveal"><i class="fa fa-star" aria-hidden="true"></i><p><strong>2nd place</strong>Codeathon</p></div>
+                <div class="win c-violet reveal"><i class="fa fa-flag-checkered" aria-hidden="true"></i><p><strong>Qualified</strong>Smart India Hackathon</p></div>
+                <div class="win c-aqua reveal"><i class="fa fa-code" aria-hidden="true"></i><p><strong><span class="count" data-to="1112">1112</span>+ problems</strong>LeetCode, <span class="count" data-to="1043">1043</span>-day streak</p></div>
+                <div class="win c-sun reveal"><i class="fa fa-graduation-cap" aria-hidden="true"></i><p><strong>Cleared GATE</strong>2024 and 2025</p></div>
+                <div class="win c-aqua reveal"><i class="fa fa-cloud" aria-hidden="true"></i><p><strong>All milestones</strong>Google Cloud Ready Program</p></div>
+                <div class="win c-coral reveal"><i class="fa fa-language" aria-hidden="true"></i><p><strong><span class="count" data-to="830">830</span>-day streak</strong>Learning Arabic and French on Duolingo</p></div>
+                <div class="win c-violet reveal"><i class="fa fa-puzzle-piece" aria-hidden="true"></i><p><strong>Chess</strong>Won several competitions</p></div>
+            </div>
+
+            <div class="two-col">
+                <div class="panel">
+                    <h3>Certifications</h3>
+                    <ul class="plain">
+                        <li><i class="fa fa-certificate" aria-hidden="true"></i> Google Cloud: Gen AI Fundamentals</li>
+                        <li><i class="fa fa-certificate" aria-hidden="true"></i> Google Cloud: Large Language Models</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>Leadership and activities</h3>
+                    <ul class="plain">
+                        <li><i class="fa fa-users" aria-hidden="true"></i> STC LLM Evaluation Lead</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> Co-Technical Head, AIMSA</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> App Development Co-Lead, GDSC</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> Mentor, TCS AI Friday Hackathon</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> AI and Automation Floor SPOC</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> Floor Lead, TCS Olympus Building</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> TCS Maitree Spock SPOC</li>
                     </ul>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec contact" id="contact">
+        <div class="wrap contact-grid">
+            <div>
+                <h2 class="sec-title">Get in touch</h2>
+                <p class="lede">Have a project, a question or an idea in applied AI? Send a message and I'll get back to you.</p>
+                <ul class="contact-links">
+                    <li><a href="mailto:mdadiladakbar@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> mdadiladakbar@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/mohdadilmohammedakbar/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/MohdAdilMohammedAkbar" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+                </ul>
+            </div>
+            <form class="form" id="contact-form" method="POST" action="https://formspree.io/f/mgegkylo">
+                <input type="hidden" name="_subject" value="Contact request from personal website">
+                <label for="f-email">Your email</label>
+                <input id="f-email" type="email" name="_replyto" placeholder="you@example.com" required>
+                <label for="f-msg">Your message</label>
+                <textarea id="f-msg" name="message" rows="5" placeholder="What would you like to talk about?" required></textarea>
+                <button class="btn btn-ink" type="submit">Send message</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap footer-row">
+            <p>&copy; <span id="current-year">2026</span> Mohd Adil Mohammed Akbar</p>
+            <ul class="social">
+                <li><a href="https://github.com/MohdAdilMohammedAkbar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/mohdadilmohammedakbar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="mailto:mdadiladakbar@gmail.com" aria-label="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            </ul>
+            <a class="to-top" href="#top" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        </div>
     </footer>
-    <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
-
 </html>
